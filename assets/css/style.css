@@ -1,9 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-margin: 0;
-padding:0;
-box-sizing: border-box;
-font-family:Arial, Helvetica, sans-serif
+:root{
+    --azul-um: #081426;
+    --azul-dois: #122544;
+    --azul-tres: #1E3A66;
+    --azul-quatro: #2A3D5F;
+    --amarelo-um: #F5B800;
+    --amarelo-dois: #D99F00;
+    --preto: #000000;
 }
 
-body{}
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/assets/img/background.png);
+}
+
+.form{
+    width: 70%;
+    align-items: center;
+    background-image: url("/assets/img/biologia.png");
+}
+
+.botao{
+    width: 100%;
+    border: 1px solid var(--preto);
+    border-radius: 12px;
+}
