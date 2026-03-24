@@ -8,23 +8,188 @@
     --amarelo-um: #F5B800;
     --amarelo-dois: #D99F00;
     --preto: #000000;
+    --branco: #FFFFFF;
+    --vermelho: #ff0000;
+    --pesquisa: #D8D8D8; 
 }
 
 *{
     margin: 0;
     padding:0;
     font-family: 'Roboto', sans-serif;
-    background-image: url(/assets/img/background.png);
+    text-decoration: none;
+    list-style: none;
+    color: var(--branco);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+a, label{
+    color: var(--amarelo-um);
+    font-weight: 800;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: var(--branco);
+    border-radius: 3rem;
+    width: 90vw;
+    justify-content: space-evenly;
+}
+
+b{
+    color: var(--amarelo-um);
+}
+
+span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+section{
+    height: 100vh;  
 }
 
 .form{
-    width: 70%;
+    background-color: var(--azul-um);
+    width: 30vw;
+    height: 50vh;
     align-items: center;
-    background-image: url("/assets/img/biologia.png");
+    display: inline-grid;
+    justify-content: center;
+    border-radius:  20px;
+}
+
+button.google>.form{
+    justify-items: center;
 }
 
 .botao{
-    width: 100%;
     border: 1px solid var(--preto);
+    background-color:  var(--azul-tres);
     border-radius: 12px;
+    padding:  10px;
+    width: 100%;
+}
+
+.botao::placeholder{
+    color: var(--branco);
+    font-weight: 800;
+}
+
+.logo{
+    width: 200px;
+}
+
+.google{
+    color: var(--preto);
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+    font-weight: 800;
+    border-radius: 12px;
+    width: 80%;
+    justify-self: center;
+}
+
+.google a{
+    color: var(--preto);
+}
+
+.callBack{
+    background-image: url("/assets/img/estudo_homem.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.botaoFim{
+    background-color: var(--preto);
+    justify-self: center;
+    width: 80%;
+}
+
+.background{
+    background-image: url(/assets/img/background.png);
+}
+
+.logoNav{
+    height: 4rem;
+}
+
+.navGrupo{
+    display: inherit;
+    gap: 6em;
+    font-size: 1.3em;
+}
+
+.navGrupo a, span{
+    color: var(--azul-dois);   
+}
+
+.pesquisa{
+    background-color: var(--pesquisa);
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.aovivo{
+    color: var(--vermelho) !important;
+}
+
+.lupa{
+    height: 28px;
+    margin: 8px;
+}
+
+.grupoPesquisa{
+    display: inherit;
+    align-items: center;
+    background-color: var(--azul-tres);
+    padding: 4px;
+    border-radius: 2em;
+}
+
+.grupoImage{
+    display: inherit;
+    align-items: center;
+}
+
+.esquerda{
+    align-self: start;
+    margin: 3vw;
+    padding: 3vw;
+}
+
+.grande{
+    font-size: 3em;
+}
+
+.aulasP{
+    margin-left: 2vw;
+    margin-top: 4vw;
+}
+
+.grupoAulasP{
+    display: flex;
+    gap: 6rem;
+}
+
+.grupoAulasP img{
+    width: 22em;
+    height: 18em;
+    border-radius: 2em;
+}
+
+.detalhes{
+    background-color: var(--azul-quatro);
 }
