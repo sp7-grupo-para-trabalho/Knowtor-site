@@ -11,6 +11,7 @@
     --branco: #FFFFFF;
     --vermelho: #ff0000;
     --pesquisa: #D8D8D8; 
+    --footer: #F9F9F9;
 }
 
 *{
@@ -57,6 +58,28 @@ span{
 
 section{
     height: 100vh;  
+}
+
+h2{
+    color: var(--preto);
+}
+
+footer{
+    display: grid;
+    justify-items: center;
+    background-color: var(--footer);
+}
+
+hr{
+    margin-bottom: 35px;
+    width: 80%;
+    background-color: var(--preto);
+    height: 0.25vh;
+}
+
+footer .logo{
+    height: 150px;
+    width: 100px;
 }
 
 .form{
