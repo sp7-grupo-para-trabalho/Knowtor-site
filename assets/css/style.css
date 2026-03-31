@@ -12,6 +12,7 @@
     --vermelho: #ff0000;
     --pesquisa: #D8D8D8; 
     --footer: #F9F9F9;
+    --backImg: #80808071;
 }
 
 *{
@@ -213,6 +214,20 @@ button.google>.form{
     border-radius: 2em;
 }
 
-.detalhes{
-    background-color: var(--azul-quatro);
+.aulasP  h2{
+    color: var(--branco);
+}
+
+.card-imagem {
+  position: relative;
+}
+
+.card-imagem figcaption {
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+    width: 73%;
+    background: var(--backImg);
+    padding: 3em;
+    border-radius: 2em;
 }
