@@ -4,7 +4,7 @@
     position: relative;
     height: 38vh;
     min-height: 240px;
-    background-image: url('/assets/img/estudo_homem.png');
+    background-image: url('./assets/img/estudo_homem.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
