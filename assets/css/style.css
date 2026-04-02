@@ -46,6 +46,8 @@ b {
     color: var(--amarelo-um);
 }
 
+/* ── Cabeçalho / Navegação ── */
+
 .cabecalho {
     position: sticky;
     top: 0;
@@ -120,6 +122,21 @@ b {
     color: var(--pesquisa);
 }
 
+/* ── Link ativo na navegação ── */
+
+.nav-ativo {
+    color: var(--amarelo-um) !important;
+    border-bottom: 2px solid var(--amarelo-um);
+    padding-bottom: 2px;
+}
+
+.nav-ativo.aovivo {
+    color: var(--vermelho) !important;
+    border-bottom-color: var(--vermelho);
+}
+
+/* ── Hero (index) ── */
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -147,6 +164,8 @@ b {
     max-width: 520px;
 }
 
+/* ── Seções genéricas ── */
+
 main > section {
     padding: 3rem 5vw;
 }
@@ -162,10 +181,9 @@ main > section {
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 0.05em;
-    color: var(--branco);
 }
 
-/* ── Aulas Populares ── */
+/* ── Cards de aulas (grid) ── */
 
 .grade-cards {
     display: flex;
@@ -267,6 +285,7 @@ main > section {
     color: var(--amarelo-um);
 }
 
+/* ── Tutoria ao Vivo ── */
 
 .badge-hoje {
     background-color: var(--amarelo-um);
@@ -334,16 +353,25 @@ main > section {
 }
 
 .tutoria-figura {
-    flex: 1;
-    max-width: 55%;
+    flex: 0 0 52%;
+    position: relative;
     overflow: hidden;
 }
 
-.tutoria-figura img {
+.tutoria-figura::after {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
     width: 35%;
+    background: linear-gradient(to right, var(--azul-tres), transparent);
+    pointer-events: none;
+}
+
+.tutoria-figura img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center top;
     display: block;
 }
 
@@ -433,23 +461,7 @@ main > section {
     margin-bottom: 0.25rem;
 }
 
-footer {
-    display: grid;
-    justify-items: center;
-    background-color: var(--footer);
-}
-
-footer .logo {
-    height: 150px;
-    width: 100px;
-}
-
-hr {
-    margin-bottom: 35px;
-    width: 80%;
-    background-color: var(--preto);
-    height: 0.25vh;
-}
+/* ── Formulários / utilitários ── */
 
 .form {
     background-color: var(--azul-um);
@@ -494,6 +506,59 @@ hr {
     width: 80%;
 }
 
-.background {
-    background-image: url('/assets/img/background.png');
+/* ── Rodapé compartilhado ── */
+
+.rodape {
+    background-color: var(--footer);
+    padding: 2.5rem 5vw 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rodape-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.rodape-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.rodape-logo figcaption {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--azul-dois);
+}
+
+.rodape-logo figcaption b {
+    color: var(--amarelo-um);
+}
+
+.rodape-slogan {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul-um);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.rodape-destaque {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul-um);
+    letter-spacing: 0.05em;
+}
+
+.texto-aovivo {
+    color: var(--vermelho);
 }

@@ -1,11 +1,5 @@
-/* ── Link ativo na nav ── */
-.nav-ativo {
-    color: var(--amarelo-um) !important;
-    border-bottom: 2px solid var(--amarelo-um);
-    padding-bottom: 2px;
-}
-
 /* ── Busca hero ── */
+
 .busca-hero {
     padding: 2.5rem 5vw 1.5rem;
     display: flex;
@@ -106,6 +100,7 @@
 }
 
 /* ── Título das seções (pill branco) ── */
+
 .titulo-secao {
     display: block;
     width: 100%;
@@ -121,6 +116,7 @@
 }
 
 /* ── Seções de carrossel ── */
+
 .secao-cursos {
     padding: 1.5rem 5vw;
 }
@@ -180,6 +176,7 @@
 }
 
 /* ── Card de curso (carrossel) ── */
+
 .card-curso {
     scroll-snap-align: start;
     flex: 0 0 150px;
@@ -223,73 +220,12 @@
 }
 
 /* ── Seções de grade (Humanas / Exatas) ── */
+
 .secao-grade {
     padding: 1.5rem 5vw;
-}
-
-.secao-grade .grade-cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .secao-grade .card-aula {
     flex: 1 1 260px;
     max-width: 320px;
-}
-
-/* ── Rodapé ── */
-.rodape {
-    margin-top: 2rem;
-    background-color: var(--footer);
-    padding: 2.5rem 5vw 1.5rem;
-}
-
-.rodape-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.rodape-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-    margin-bottom: 0.25rem;
-}
-
-.rodape-logo img {
-    height: 60px;
-    width: auto;
-}
-
-.rodape-logo figcaption {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--azul-dois);
-}
-
-.rodape-logo figcaption b {
-    color: var(--amarelo-um);
-}
-
-.rodape-slogan {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--azul-um);
-    letter-spacing: 0.05em;
-    text-align: center;
-}
-
-.rodape-destaque {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--azul-um);
-    letter-spacing: 0.05em;
-}
-
-.texto-aovivo {
-    color: var(--vermelho);
 }

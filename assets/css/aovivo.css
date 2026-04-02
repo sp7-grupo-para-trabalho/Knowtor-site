@@ -1,0 +1,140 @@
+/* ── Hero ── */
+
+.hero-aovivo {
+    position: relative;
+    height: 38vh;
+    min-height: 240px;
+    background-image: url('/assets/img/estudo_homem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-aovivo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(8, 20, 38, 0.75) 0%,
+        rgba(8, 20, 38, 0.2) 60%,
+        transparent 100%
+    );
+}
+
+.hero-aovivo-texto {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 5vw;
+    max-width: 480px;
+}
+
+.hero-aovivo-texto h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+/* ── Seção AULAS AO VIVO ── */
+
+.secao-aovivo {
+    padding: 2rem 5vw 3rem;
+}
+
+.titulo-aovivo {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.75rem;
+    color: var(--branco);
+}
+
+/* ── Lista de aulas ── */
+
+.lista-aulas-aovivo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ── Card individual ── */
+
+.card-aovivo {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-aovivo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-aovivo-figura {
+    position: relative;
+    display: block;
+    height: 150px;
+}
+
+.card-aovivo-figura img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+}
+
+.card-aovivo-figura::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(8, 20, 38, 0.65) 0%,
+        transparent 50%
+    );
+}
+
+/* Nome da disciplina — bottom-left ── */
+
+.card-aovivo-nome {
+    position: absolute;
+    bottom: 0.9rem;
+    left: 1.1rem;
+    z-index: 2;
+}
+
+.card-aovivo-nome h3 {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Badge de descrição — top-right ── */
+
+.card-aovivo-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.9rem;
+    z-index: 2;
+    background: rgba(8, 20, 38, 0.55);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.4rem;
+    text-align: right;
+}
+
+.card-aovivo-badge p {
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+

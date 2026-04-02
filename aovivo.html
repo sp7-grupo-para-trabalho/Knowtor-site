@@ -1,57 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowtor — Ao Vivo</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aovivo.css">
 </head>
 <body>
-    <header class="callBack">
-        <nav>
-            <div class="grupoImage">
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="nav-logo">
                 <img src="/assets/img/know relogo .png" alt="Logo Knowtor" class="logoNav">
-                <span>
-                    Know<b>tor</b>
-                </span>
+                <span>Know<b>tor</b></span>
             </div>
-            <div class="navGrupo">
-                <a href="index.html">Inicio</a>
-                <a href="cursos.html">Cursos</a>
-                <a class="aovivo" href="aovivo.html">Ao Vivo</a>
-            </div>
-            <div class="grupoPesquisa">
-                <img src="/assets/img/lupa.png" alt="Lupa de pesquisa" class="lupa">
-                <input type="text" class="pesquisa">
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a class="aovivo nav-ativo" href="aovivo.html">Ao Vivo</a></li>
+            </ul>
+
+            <div class="nav-pesquisa">
+                <label for="busca-nav" class="sr-only">Pesquisar cursos</label>
+                <img src="/assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
+                <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
             </div>
         </nav>
     </header>
+
     <main>
-        <div>
-            <figure class="card-imagem">
-            <img src="/assets/img/estudo_homem.png" alt="Homem estudando com luz baixa">
-            <figcaption>Iluminamos o seu caminho de aprendizagem</figcaption>
-            </figure>
-        </div>
-        <div>
-            <h1>Aulas ao vivo</h1>
-            <figure class="card-imagem">
-            <img src="/assets/img/portugues.png" alt="Português">
-            <figcaption>Português</figcaption>
-            </figure>
-            <figure class="card-imagem">
-            <img src="/assets/img/ingles .png" alt="Inglês">
-            <figcaption>Inglês</figcaption>
-            </figure>
-            <figure class="card-imagem">
-            <img src="/assets/img/economia.png" alt="Economia">
-            <figcaption>Economia</figcaption>
-            </figure>
-        </div>
+        <section class="hero-aovivo" aria-label="Aulas ao vivo — apresentação">
+            <div class="hero-aovivo-texto">
+                <h1>ILUMINAMOS O SEU CAMINHO DE APRENDIZAGEM</h1>
+            </div>
+        </section>
+
+        <section class="secao-aovivo" aria-labelledby="titulo-aovivo">
+            <h2 id="titulo-aovivo" class="titulo-aovivo">AULAS AO VIVO</h2>
+
+            <ul class="lista-aulas-aovivo" role="list">
+                <li>
+                    <article class="card-aovivo" aria-label="Aula ao vivo de Português">
+                        <figure class="card-aovivo-figura">
+                            <img src="/assets/img/portugues.png" alt="Aula de Português ao vivo">
+                            <figcaption class="card-aovivo-nome">
+                                <h3>PORTUGUÊS</h3>
+                            </figcaption>
+                        </figure>
+                        <aside class="card-aovivo-badge" aria-label="aula de português, do básico ao avançado">
+                            <p>aula de português</p>
+                            <p>do básico ao avançado</p>
+                        </aside>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aovivo" aria-label="Aula ao vivo de Inglês">
+                        <figure class="card-aovivo-figura">
+                            <img src="/assets/img/ingles .png" alt="Aula de Inglês ao vivo">
+                            <figcaption class="card-aovivo-nome">
+                                <h3>INGLÊS</h3>
+                            </figcaption>
+                        </figure>
+                        <aside class="card-aovivo-badge" aria-label="aula de inglês, do básico ao avançado">
+                            <p>aula de inglês</p>
+                            <p>do básico ao avançado</p>
+                        </aside>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aovivo" aria-label="Aula ao vivo de Economia">
+                        <figure class="card-aovivo-figura">
+                            <img src="/assets/img/economia.png" alt="Aula de Economia ao vivo">
+                            <figcaption class="card-aovivo-nome">
+                                <h3>ECONOMIA</h3>
+                            </figcaption>
+                        </figure>
+                        <aside class="card-aovivo-badge" aria-label="aula de economia, do básico ao avançado">
+                            <p>aula de economia</p>
+                            <p>do básico ao avançado</p>
+                        </aside>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
-    <footer>
-        <img src="/assets/img/logo.png" alt="Logo Knowtor" class="logo">
-        <h2> iluminamos o seu caminho de aprendizagem<br>AULAS TOTALMENTE <b class="aovivo">AO VIVO</b></h2>
-        <hr>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <figure class="rodape-logo">
+                <img src="/assets/img/know relogo .png" alt="Logo Knowtor">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+            <p class="rodape-slogan">ILUMINANDO O SEU CAMINHO DE APRENDIZAGEM</p>
+            <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
+        </div>
     </footer>
 </body>
 </html>
