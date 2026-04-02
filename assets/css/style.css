@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     --azul-um: #081426;
     --azul-dois: #122544;
     --azul-tres: #1E3A66;
@@ -10,111 +10,471 @@
     --preto: #000000;
     --branco: #FFFFFF;
     --vermelho: #ff0000;
-    --pesquisa: #D8D8D8; 
+    --pesquisa: #D8D8D8;
     --footer: #F9F9F9;
-    --backImg: #80808071;
+    --backImg: rgba(0, 0, 0, 0.45);
+    --raio-card: 1.2rem;
 }
 
-*{
+*, *::before, *::after {
     margin: 0;
-    padding:0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style: none;
     color: var(--branco);
 }
 
-main{
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+body {
+    background-image: url(/assets/img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+b {
+    color: var(--amarelo-um);
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--azul-um);
+    padding: 0.75rem 5vw;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--branco);
+    border-radius: 3rem;
+    padding: 0.5rem 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--azul-dois);
+}
+
+.logoNav {
+    height: 3.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: var(--azul-dois);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.nav-links a.aovivo {
+    color: var(--vermelho);
+}
+
+.nav-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: var(--azul-tres);
+    padding: 0.4rem 0.75rem;
+    border-radius: 2rem;
+    gap: 0.4rem;
+}
+
+.lupa {
+    height: 22px;
+}
+
+.pesquisa {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--branco);
+    font-size: 0.9rem;
+    width: 14rem;
+}
+
+.pesquisa::placeholder {
+    color: var(--pesquisa);
+}
+
+.hero {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem 5vw;
+    min-height: 92vh;
+    background-image: url('/assets/img/estudo_homem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 600px;
+}
+
+.hero-subtitulo {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+main > section {
+    padding: 3rem 5vw;
+}
+
+.secao-cabecalho {
+    display: flex;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-h1{
-    text-align: center;
+.secao-cabecalho h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--branco);
 }
 
-a, label{
-    color: var(--amarelo-um);
+/* ── Aulas Populares ── */
+
+.grade-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.card-aula {
+    position: relative;
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    flex: 1 1 280px;
+    max-width: 340px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card-aula:hover {
+    transform: translateY(-4px);
+}
+
+.badge-novo {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+    background-color: var(--amarelo-um);
+    color: var(--preto);
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+}
+
+.card-figura {
+    position: relative;
+    display: block;
+    height: 280px;
+}
+
+.card-figura img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--backImg);
+    padding: 1rem 1.25rem;
+    backdrop-filter: blur(2px);
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
     font-weight: 800;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    background-color: var(--branco);
-    border-radius: 3rem;
-    width: 90vw;
-    justify-content: space-evenly;
+.card-info p {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    margin: 0.2rem 0 0.5rem;
 }
 
-b{
+/* ── Avaliação / Estrelas ── */
+
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.estrelas-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.estrelas-fundo {
+    color: #555;
+}
+
+.estrelas-preenchidas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
     color: var(--amarelo-um);
 }
 
-span{
-    font-size: 1.5em;
+.nota {
+    font-size: 0.85rem;
     font-weight: 700;
+    color: var(--amarelo-um);
 }
 
-section{
-    height: 100vh;  
-}
 
-h2{
+.badge-hoje {
+    background-color: var(--amarelo-um);
     color: var(--preto);
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.25rem 0.8rem;
+    border-radius: 2rem;
 }
 
-footer{
+.card-tutoria {
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(135deg, var(--azul-tres) 0%, var(--azul-quatro) 100%);
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    min-height: 260px;
+}
+
+.tutoria-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 3rem;
+    gap: 0.5rem;
+}
+
+.tutoria-subtitulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
+
+.tutoria-materia {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.tutoria-horario {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.btn-entrar {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.65rem 2rem;
+    background-color: var(--preto);
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border-radius: 0.4rem;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.btn-entrar:hover {
+    background-color: var(--azul-dois);
+}
+
+.tutoria-figura {
+    flex: 1;
+    max-width: 55%;
+    overflow: hidden;
+}
+
+.tutoria-figura img {
+    width: 35%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* ── Aprenda Mais ── */
+
+.paginacao-carrossel {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.pag-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--azul-quatro);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pag-btn.pag-ativo {
+    background-color: var(--amarelo-um);
+}
+
+.grade-cards-pequenos {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.grade-cards-pequenos::-webkit-scrollbar {
+    height: 4px;
+}
+
+.grade-cards-pequenos::-webkit-scrollbar-track {
+    background: var(--azul-dois);
+    border-radius: 2px;
+}
+
+.grade-cards-pequenos::-webkit-scrollbar-thumb {
+    background: var(--azul-tres);
+    border-radius: 2px;
+}
+
+.card-pequeno {
+    scroll-snap-align: start;
+    flex: 0 0 160px;
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card-pequeno:hover {
+    transform: translateY(-3px);
+}
+
+.card-figura-pequena {
+    position: relative;
+    height: 160px;
+    display: block;
+}
+
+.card-figura-pequena img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info-pequeno {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--backImg);
+    padding: 0.6rem 0.75rem;
+}
+
+.card-info-pequeno h3 {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+footer {
     display: grid;
     justify-items: center;
     background-color: var(--footer);
 }
 
-hr{
+footer .logo {
+    height: 150px;
+    width: 100px;
+}
+
+hr {
     margin-bottom: 35px;
     width: 80%;
     background-color: var(--preto);
     height: 0.25vh;
 }
 
-footer .logo{
-    height: 150px;
-    width: 100px;
-}
-
-.form{
+.form {
     background-color: var(--azul-um);
     width: 30vw;
     height: 50vh;
     align-items: center;
     display: inline-grid;
     justify-content: center;
-    border-radius:  20px;
+    border-radius: 20px;
 }
 
-button.google>.form{
-    justify-items: center;
-}
-
-.botao{
+.botao {
     border: 1px solid var(--preto);
-    background-color:  var(--azul-tres);
+    background-color: var(--azul-tres);
     border-radius: 12px;
-    padding:  10px;
+    padding: 10px;
     width: 100%;
 }
 
-.botao::placeholder{
+.botao::placeholder {
     color: var(--branco);
     font-weight: 800;
 }
 
-.logo{
-    width: 200px;
-}
-
-.google{
+.google {
     color: var(--preto);
     background-color: var(--branco);
     border: 1px solid var(--preto);
@@ -124,110 +484,16 @@ button.google>.form{
     justify-self: center;
 }
 
-.google a{
+.google a {
     color: var(--preto);
 }
 
-.callBack{
-    background-image: url("/assets/img/estudo_homem.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-}
-
-.botaoFim{
+.botaoFim {
     background-color: var(--preto);
     justify-self: center;
     width: 80%;
 }
 
-.background{
-    background-image: url(/assets/img/background.png);
-}
-
-.logoNav{
-    height: 4rem;
-}
-
-.navGrupo{
-    display: inherit;
-    gap: 6em;
-    font-size: 1.3em;
-}
-
-.navGrupo a, span{
-    color: var(--azul-dois);   
-}
-
-.pesquisa{
-    background-color: var(--pesquisa);
-    padding: 1em;
-    border-radius: 3em;
-}
-
-.aovivo{
-    color: var(--vermelho) !important;
-}
-
-.lupa{
-    height: 28px;
-    margin: 8px;
-}
-
-.grupoPesquisa{
-    display: inherit;
-    align-items: center;
-    background-color: var(--azul-tres);
-    padding: 4px;
-    border-radius: 2em;
-}
-
-.grupoImage{
-    display: inherit;
-    align-items: center;
-}
-
-.esquerda{
-    align-self: start;
-    margin: 3vw;
-    padding: 3vw;
-}
-
-.grande{
-    font-size: 3em;
-}
-
-.aulasP{
-    margin-left: 2vw;
-    margin-top: 4vw;
-}
-
-.grupoAulasP{
-    display: flex;
-    gap: 6rem;
-}
-
-.grupoAulasP img{
-    width: 22em;
-    height: 18em;
-    border-radius: 2em;
-}
-
-.aulasP  h2{
-    color: var(--branco);
-}
-
-.card-imagem {
-  position: relative;
-}
-
-.card-imagem figcaption {
-    position: absolute;
-    bottom: 4px;
-    left: 0px;
-    width: 73%;
-    background: var(--backImg);
-    padding: 3em;
-    border-radius: 2em;
+.background {
+    background-image: url('/assets/img/background.png');
 }

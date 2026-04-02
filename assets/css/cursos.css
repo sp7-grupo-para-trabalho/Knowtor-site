@@ -1,0 +1,295 @@
+/* ── Link ativo na nav ── */
+.nav-ativo {
+    color: var(--amarelo-um) !important;
+    border-bottom: 2px solid var(--amarelo-um);
+    padding-bottom: 2px;
+}
+
+/* ── Busca hero ── */
+.busca-hero {
+    padding: 2.5rem 5vw 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.busca-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--branco);
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+.busca-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.busca-conteudo h1 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--azul-um);
+    letter-spacing: 0.03em;
+}
+
+.busca-conteudo p {
+    font-size: 0.8rem;
+    color: var(--azul-quatro);
+    font-weight: 600;
+}
+
+.busca-form {
+    margin-top: 0.5rem;
+}
+
+.busca-input {
+    width: 100%;
+    max-width: 360px;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--azul-tres);
+    border: none;
+    border-radius: 2rem;
+    color: var(--branco);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.busca-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.busca-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.busca-logo img {
+    height: 70px;
+    width: auto;
+}
+
+.busca-logo figcaption {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--azul-dois);
+}
+
+.busca-logo figcaption b {
+    color: var(--amarelo-um);
+}
+
+.btn-categorias {
+    display: inline-block;
+    padding: 0.45rem 1.25rem;
+    border: 1.5px solid var(--branco);
+    border-radius: 0.4rem;
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-categorias:hover {
+    background-color: var(--branco);
+    color: var(--azul-um);
+}
+
+/* ── Título das seções (pill branco) ── */
+.titulo-secao {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--branco);
+    color: var(--azul-um) !important;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Seções de carrossel ── */
+.secao-cursos {
+    padding: 1.5rem 5vw;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.seta-carrossel {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--amarelo-um);
+    color: var(--preto);
+    font-size: 1.4rem;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.15s;
+    line-height: 1;
+}
+
+.seta-carrossel:hover {
+    background-color: var(--amarelo-dois);
+    transform: scale(1.08);
+}
+
+.lista-carrossel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.lista-carrossel::-webkit-scrollbar {
+    height: 3px;
+}
+
+.lista-carrossel::-webkit-scrollbar-track {
+    background: var(--azul-dois);
+    border-radius: 2px;
+}
+
+.lista-carrossel::-webkit-scrollbar-thumb {
+    background: var(--azul-tres);
+    border-radius: 2px;
+}
+
+/* ── Card de curso (carrossel) ── */
+.card-curso {
+    scroll-snap-align: start;
+    flex: 0 0 150px;
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card-curso:hover {
+    transform: translateY(-4px);
+}
+
+.card-curso-figura {
+    position: relative;
+    height: 140px;
+    display: block;
+}
+
+.card-curso-figura img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-curso-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--backImg);
+    padding: 0.5rem 0.6rem;
+    backdrop-filter: blur(2px);
+}
+
+.card-curso-info h3 {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.2rem;
+}
+
+/* ── Seções de grade (Humanas / Exatas) ── */
+.secao-grade {
+    padding: 1.5rem 5vw;
+}
+
+.secao-grade .grade-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.secao-grade .card-aula {
+    flex: 1 1 260px;
+    max-width: 320px;
+}
+
+/* ── Rodapé ── */
+.rodape {
+    margin-top: 2rem;
+    background-color: var(--footer);
+    padding: 2.5rem 5vw 1.5rem;
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rodape-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.rodape-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.rodape-logo figcaption {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--azul-dois);
+}
+
+.rodape-logo figcaption b {
+    color: var(--amarelo-um);
+}
+
+.rodape-slogan {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul-um);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.rodape-destaque {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul-um);
+    letter-spacing: 0.05em;
+}
+
+.texto-aovivo {
+    color: var(--vermelho);
+}

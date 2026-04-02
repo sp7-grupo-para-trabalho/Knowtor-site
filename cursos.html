@@ -1,138 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title>
+    <title>Knowtor — Cursos</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cursos.css">
 </head>
 <body>
-    <header class="callBack">
-        <nav>
-            <div class="grupoImage">
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="nav-logo">
                 <img src="/assets/img/know relogo .png" alt="Logo Knowtor" class="logoNav">
-                <span>
-                    Know<b>tor</b>
-                </span>
+                <span>Know<b>tor</b></span>
             </div>
-            <div class="navGrupo">
-                <a href="index.html">Inicio</a>
-                <a href="cursos.html">Cursos</a>
-                <a class="aovivo" href="aovivo.html">Ao Vivo</a>
-            </div>
-            <div class="grupoPesquisa">
-                <img src="/assets/img/lupa.png" alt="Lupa de pesquisa" class="lupa">
-                <input type="text" class="pesquisa">
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html" class="nav-ativo">Cursos</a></li>
+                <li><a class="aovivo" href="aovivo.html">Ao Vivo</a></li>
+            </ul>
+
+            <div class="nav-pesquisa">
+                <label for="busca-nav" class="sr-only">Pesquisar cursos</label>
+                <img src="/assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
+                <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
             </div>
         </nav>
     </header>
+
     <main>
-        <section>
-            <div>
-                <h3>o que você deseja aprender?<br>Pesquise um tema e escolha cursos perfeitos para você</h3>
-                <img src="/assets/img/logo.png" alt="Logo Knowtor" class="logo">
-            </div>
-            <button class="redirecionamento" type="button">
-                <a  href="#">Categorias></a>
-            </button>
-            <div>
-            <button class="titulo" type="button">
-                <a  href="#">TODOS OS CURSOS DISPONÍVEIS</a>
-            </button>
-            <h6><</h6>
-            <div class="grupoAulasP">
-                <figure class="card-imagem">
-                    <img src="/assets/img/geografia.png" alt="Geografia">
-                    <figcaption>Geografia</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/historia.png" alt="História">
-                    <figcaption>História</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/historia.png" alt="História">
-                    <figcaption>História</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/biologia.png" alt="Ciências">
-                    <figcaption>Ciências</figcaption>
+        <section class="busca-hero" aria-label="Busca de cursos">
+            <div class="busca-card">
+                <div class="busca-conteudo">
+                    <h1>O QUE VOCÊ DESEJA APRENDER?</h1>
+                    <p>PESQUISE UM TEMA E ESCOLHA CURSOS PERFEITOS PARA VOCÊ</p>
+                    <form class="busca-form" role="search">
+                        <label for="busca-curso" class="sr-only">Buscar curso</label>
+                        <input
+                            type="search"
+                            id="busca-curso"
+                            class="busca-input"
+                            placeholder="Ex: Matemática, Inglês, Física..."
+                            autocomplete="off"
+                        >
+                    </form>
+                </div>
+                <figure class="busca-logo" aria-hidden="true">
+                    <img src="/assets/img/know relogo .png" alt="">
+                    <figcaption>Know<b>tor</b></figcaption>
                 </figure>
             </div>
-            <h6>></h6>
-            </div>
-            <div>
-            <button class="titulo" type="button">
-                <a  href="#">LINGUAS</a>
-            </button>
-            <h6><</h6>
-            <div class="grupoAulasP">
-                <figure class="card-imagem">
-                    <img src="/assets/img/espanhol.png" alt="Espanhol">
-                    <figcaption>Espanhol</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/japones.jpeg" alt="Japones">
-                    <figcaption>Japonês</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/ingles .png" alt="Inglês">
-                    <figcaption>Inglês</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/frances.jpeg" alt="Françês">
-                    <figcaption>Françês</figcaption>
-                </figure>
-            </div>
-            <h6>></h6>
-            </div>
-            <div>
-            <button class="titulo" type="button">
-                <a  href="#">HUMANAS</a>
-            </button>
-            <h6><</h6>
-            <div class="grupoAulasP">
-                <figure class="card-imagem">
-                    <img src="/assets/img/fisica.png" alt="Física">
-                    <figcaption>Física</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/matematica.png" alt="Matemática">
-                    <figcaption>Matemática</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/quimica.jpeg" alt="Química">
-                    <figcaption>Química</figcaption>
-                </figure>
-            </div>
-            <h6>></h6>
-            </div>
-            <div>
-            <button class="titulo" type="button">
-                <a  href="#">EXATAS</a>
-            </button>
-            <h6><</h6>
-            <div class="grupoAulasP">
-                <figure class="card-imagem">
-                    <img src="/assets/img/fisica.png" alt="Física">
-                    <figcaption>Física</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/fisica.png" alt="Física">
-                    <figcaption>Física</figcaption>
-                </figure>
-                <figure class="card-imagem">
-                    <img src="/assets/img/fisica.png" alt="Física">
-                    <figcaption>Física</figcaption>
-                </figure>
-            </div>
-            <h6>></h6>
+            <a href="#categorias" class="btn-categorias">CATEGORIAS &rsaquo;</a>
+        </section>
+
+        <section id="categorias" class="secao-cursos" aria-labelledby="titulo-todos">
+            <h2 id="titulo-todos" class="titulo-secao">TODOS OS CURSOS DIFERENTES</h2>
+
+            <div class="carrossel" data-carrossel="todos">
+                <button
+                    class="seta-carrossel"
+                    aria-label="Cursos anteriores"
+                    data-alvo="todos"
+                    data-dir="-1"
+                >&#8249;</button>
+
+                <ul class="lista-carrossel" id="carrossel-todos" role="list">
+                    <li>
+                        <article class="card-curso" aria-label="Geografia">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/geografia.png" alt="Aula de Geografia">
+                                <figcaption class="card-curso-info">
+                                    <h3>GEOGRAFIA</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="História">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/historia.png" alt="Aula de História">
+                                <figcaption class="card-curso-info">
+                                    <h3>HISTÓRIA</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Física">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/fisica.png" alt="Aula de Física">
+                                <figcaption class="card-curso-info">
+                                    <h3>FÍSICA</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Ciências">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/quimica.jpeg" alt="Aula de Ciências">
+                                <figcaption class="card-curso-info">
+                                    <h3>CIÊNCIAS</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Matemática">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/matematica.png" alt="Aula de Matemática">
+                                <figcaption class="card-curso-info">
+                                    <h3>MATEMÁTICA</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Economia">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/economia.png" alt="Aula de Economia">
+                                <figcaption class="card-curso-info">
+                                    <h3>ECONOMIA</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                </ul>
+
+                <button
+                    class="seta-carrossel"
+                    aria-label="Próximos cursos"
+                    data-alvo="todos"
+                    data-dir="1"
+                >&#8250;</button>
             </div>
         </section>
+
+        <section class="secao-cursos" aria-labelledby="titulo-linguas">
+            <h2 id="titulo-linguas" class="titulo-secao">LÍNGUAS</h2>
+
+            <div class="carrossel" data-carrossel="linguas">
+                <button
+                    class="seta-carrossel"
+                    aria-label="Línguas anteriores"
+                    data-alvo="linguas"
+                    data-dir="-1"
+                >&#8249;</button>
+
+                <ul class="lista-carrossel" id="carrossel-linguas" role="list">
+                    <li>
+                        <article class="card-curso" aria-label="Espanhol">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/espanhol.png" alt="Aula de Espanhol">
+                                <figcaption class="card-curso-info">
+                                    <h3>ESPANHOL</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Japonês">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/japones.jpeg" alt="Aula de Japonês">
+                                <figcaption class="card-curso-info">
+                                    <h3>JAPONÊS</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Inglês">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/ingles .png" alt="Aula de Inglês">
+                                <figcaption class="card-curso-info">
+                                    <h3>INGLÊS</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Francês">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/frances.jpeg" alt="Aula de Francês">
+                                <figcaption class="card-curso-info">
+                                    <h3>FRANCÊS</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card-curso" aria-label="Português">
+                            <figure class="card-curso-figura">
+                                <img src="/assets/img/portugues.png" alt="Aula de Português">
+                                <figcaption class="card-curso-info">
+                                    <h3>PORTUGUÊS</h3>
+                                    <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                        <div class="estrelas-wrapper" aria-hidden="true">
+                                            <span class="estrelas-fundo">★★★★★</span>
+                                            <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                        </div>
+                                        <span class="nota">4.5</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                </ul>
+
+                <button
+                    class="seta-carrossel"
+                    aria-label="Próximas línguas"
+                    data-alvo="linguas"
+                    data-dir="1"
+                >&#8250;</button>
+            </div>
+        </section>
+
+        <section class="secao-grade" aria-labelledby="titulo-humanas">
+            <h2 id="titulo-humanas" class="titulo-secao">HUMANAS</h2>
+
+            <ul class="grade-cards" role="list">
+                <li>
+                    <article class="card-aula" aria-label="História — Humanas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/historia.png" alt="Aula de História">
+                            <figcaption class="card-info">
+                                <h3>HISTÓRIA</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aula" aria-label="Geografia — Humanas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/geografia.png" alt="Aula de Geografia">
+                            <figcaption class="card-info">
+                                <h3>GEOGRAFIA</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aula" aria-label="Português — Humanas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/portugues.png" alt="Aula de Português">
+                            <figcaption class="card-info">
+                                <h3>PORTUGUÊS</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao-grade" aria-labelledby="titulo-exatas">
+            <h2 id="titulo-exatas" class="titulo-secao">EXATAS</h2>
+
+            <ul class="grade-cards" role="list">
+                <li>
+                    <article class="card-aula" aria-label="Física — Exatas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/fisica.png" alt="Aula de Física">
+                            <figcaption class="card-info">
+                                <h3>FÍSICA</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aula" aria-label="Matemática — Exatas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/matematica.png" alt="Aula de Matemática">
+                            <figcaption class="card-info">
+                                <h3>MATEMÁTICA</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li>
+                    <article class="card-aula" aria-label="Química — Exatas">
+                        <span class="badge-novo" aria-label="Novo">NOVO</span>
+                        <figure class="card-figura">
+                            <img src="/assets/img/quimica.jpeg" alt="Aula de Química">
+                            <figcaption class="card-info">
+                                <h3>QUÍMICA</h3>
+                                <p>Do 1º Ano ens médio ao 3º Ano ens med</p>
+                                <div class="avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                                    <div class="estrelas-wrapper" aria-hidden="true">
+                                        <span class="estrelas-fundo">★★★★★</span>
+                                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                                    </div>
+                                    <span class="nota">4.5</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
-    <footer>
-        <img src="/assets/img/logo.png" alt="Logo Knowtor" class="logo">
-        <h2> iluminamos o seu caminho de aprendizagem<br>AULAS TOTALMENTE <b class="aovivo">AO VIVO</b></h2>
-        <hr>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <figure class="rodape-logo">
+                <img src="/assets/img/know relogo .png" alt="Logo Knowtor">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+            <p class="rodape-slogan">ILUMINANDO O SEU CAMINHO DE APRENDIZAGEM</p>
+            <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
+        </div>
     </footer>
+
+    <script src="assets/js/cursos.js"></script>
 </body>
 </html>
