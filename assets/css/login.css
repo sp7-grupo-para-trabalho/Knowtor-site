@@ -1,0 +1,223 @@
+.login-body {
+    background-image: url('/assets/img/estudo_homem.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem 3rem;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 440px;
+}
+
+/* ── Logo ── */
+
+.login-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.login-logo img {
+    height: 72px;
+    width: auto;
+}
+
+.login-logo figcaption {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--azul-dois);
+    background-color: var(--branco);
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.4rem;
+}
+
+.login-logo figcaption b {
+    color: var(--amarelo-um);
+}
+
+/* ── Título ── */
+
+.login-titulo {
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    max-width: 400px;
+}
+
+/* ── Formulário ── */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    background-color: var(--azul-dois);
+    border-radius: 1rem;
+    padding: 1.75rem 2rem;
+}
+
+.campo-erro {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    background-color: var(--azul-tres);
+    border: none;
+    border-radius: 2rem;
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    outline: none;
+    text-align: center;
+}
+
+.login-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-entrar-login {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-entrar-login:hover {
+    background-color: var(--azul-quatro);
+}
+
+.outras-maneiras {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--amarelo-um);
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--branco);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--preto);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.btn-google:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.link-esqueceu {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--amarelo-um);
+    text-align: left;
+}
+
+.link-esqueceu:hover {
+    text-decoration: underline;
+}
+
+/* ── CTA Cadastro ── */
+
+.cadastro-cta {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.link-cadastro {
+    color: var(--amarelo-um);
+    font-weight: 900;
+}
+
+.link-cadastro:hover {
+    text-decoration: underline;
+}
+
+/* ── Botão secundário (enviar código) ── */
+
+.btn-secundario {
+    background-color: var(--azul-quatro);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul-tres);
+}
+
+/* ── Cadastro específico ── */
+
+.cadastro-form {
+    gap: 0.6rem;
+}
+
+.cadastro-titulo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.25rem;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.campo-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--amarelo-um);
+}

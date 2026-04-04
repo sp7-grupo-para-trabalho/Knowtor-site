@@ -25,6 +25,10 @@
                 <img src="./assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
                 <input type="search" id="busca" class="pesquisa" placeholder="Pesquisar...">
             </div>
+
+            <button id="nav-avatar" class="nav-avatar" aria-label="Perfil do usuário" hidden>
+                <span class="avatar-iniciais" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
@@ -213,6 +217,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script>requireAuth();</script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

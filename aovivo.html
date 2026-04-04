@@ -26,6 +26,10 @@
                 <img src="./assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
                 <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
             </div>
+
+            <button id="nav-avatar" class="nav-avatar" aria-label="Perfil do usuário" hidden>
+                <span class="avatar-iniciais" aria-hidden="true"></span>
+            </button>
         </nav>
     </header>
 
@@ -96,5 +100,8 @@
             <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
         </div>
     </footer>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>requireAuth();</script>
 </body>
 </html>

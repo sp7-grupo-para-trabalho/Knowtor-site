@@ -1,26 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuração de senha</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Knowtor — Recuperar Senha</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
-<body>
-    <main class="callBack">
-        <img src="./assets/img/logo.png" alt="Logo Knowtor" class="logo">
-        <div class=" background form">
-            <label for="email">DIGITE SEU EMAIL</label>
-            <input class="botao" type="text" placeholder="EMAIL" id="">
-            <button class="botaoFim" type="button">
-                Enviar código por email
-            </button>
-            <label for="email">DIGITE O CODIGO RECEBIDO NO EMAIL</label>
-            <input class="botao" type="text" placeholder="CODIGO" id="">
-            <button class="botaoFim" type="button" onclick="location.href= 'senha2.html'">
-                CONFIRMAR
-            </button>
+<body class="login-body">
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="nav-logo">
+                <img src="./assets/img/know relogo .png" alt="Logo Knowtor" class="logoNav">
+                <span>Know<b>tor</b></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a class="aovivo" href="aovivo.html">Ao Vivo</a></li>
+            </ul>
+
+            <div class="nav-pesquisa">
+                <label for="busca-nav" class="sr-only">Pesquisar cursos</label>
+                <img src="./assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
+                <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-main" aria-label="Recuperação de senha — passo 1">
+        <div class="login-container">
+            <figure class="login-logo" aria-hidden="true">
+                <img src="./assets/img/logo.png" alt="">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+
+            <form class="login-form cadastro-form" id="senha-form" novalidate aria-label="Formulário de recuperação de senha">
+
+                <div class="campo-grupo">
+                    <label for="email" class="campo-label">DIGITE O SEU EMAIL</label>
+                    <input type="email" id="email" class="login-input" placeholder="SMS DO EMAIL" autocomplete="email">
+                </div>
+
+                <button type="button" class="btn-entrar-login btn-secundario" id="btn-enviar">
+                    ENVIAR CÓDIGO POR EMAIL
+                </button>
+
+                <div class="campo-grupo">
+                    <label for="codigo" class="campo-label">DIGITE O CÓDIGO RECEBIDO NO EMAIL</label>
+                    <input type="text" id="codigo" class="login-input" placeholder="SMS DO EMAIL" autocomplete="one-time-code">
+                </div>
+
+                <button type="submit" class="btn-entrar-login">CONFIRMAR</button>
+            </form>
         </div>
     </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <figure class="rodape-logo">
+                <img src="./assets/img/know relogo .png" alt="Logo Knowtor">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+            <p class="rodape-slogan">ILUMINAMODS O SEU CAMINHO DE APRENDIZAGEM</p>
+            <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('senha-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = './senha2.html';
+        });
+    </script>
 </body>
 </html>
