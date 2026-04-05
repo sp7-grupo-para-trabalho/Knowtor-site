@@ -188,6 +188,8 @@
 
 .card-curso:hover {
     transform: translateY(-4px);
+    box-shadow: 0 3px 8px 8px hsla(0, 0%, 100%, 0.541);
+    border: 2px solid var(--branco);
 }
 
 .card-curso-figura {
