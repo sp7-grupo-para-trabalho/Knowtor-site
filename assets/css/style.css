@@ -36,7 +36,7 @@
 }
 
 body {
-    background-image: url(/assets/img/background.png);
+    background-image: url(../img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -171,7 +171,7 @@ b {
     justify-content: flex-end;
     padding: 4rem 5vw;
     min-height: 92vh;
-    background-image: url('/assets/img/estudo_homem.png');
+    background-image: url('../img/estudo_homem.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
