@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
+    padding-top: 500px;
 }
 
 .hero-aovivo::before {
@@ -69,6 +70,8 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .card-aovivo:hover {
@@ -84,7 +87,7 @@
 
 .card-aovivo-figura img {
     width: 100%;
-    height: 35em;
+    height: 20em;
     object-fit: fill;
     object-position: center;
     display: block;
