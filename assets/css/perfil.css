@@ -1,0 +1,318 @@
+/* ── Hero do perfil ── */
+
+.perfil-hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    padding: 2rem 5vw 2.5rem;
+    min-height: 240px;
+    background-image: url('./assets/img/estudo_homem.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.perfil-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 20, 38, 0.55) 0%,
+        rgba(8, 20, 38, 0.75) 100%
+    );
+}
+
+/* Horas disponível — top right */
+
+.perfil-horas {
+    position: absolute;
+    top: 1rem;
+    right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+    z-index: 1;
+}
+
+.perfil-horas-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    opacity: 0.85;
+}
+
+.perfil-horas-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--azul-dois);
+    border: 2px solid var(--amarelo-um);
+    border-radius: 2rem;
+    padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+}
+
+.perfil-horas-badge img {
+    height: 6em;
+    width: auto;
+}
+
+.perfil-horas-badge span {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--amarelo-um);
+}
+
+/* Identidade (foto + nome) */
+
+.perfil-identidade {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.perfil-foto {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    border: 4px solid var(--azul-tres);
+    border-radius: 0.75rem;
+    background-color: var(--azul-dois);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.perfil-foto-iniciais {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--amarelo-um);
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.perfil-nome {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Botão configurações — bottom right */
+
+.btn-config-perfil {
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color: var(--branco);
+    line-height: 1.4;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.btn-config-perfil:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* ── Seções do perfil ── */
+
+.perfil-secao {
+    padding: 2.5rem 5vw;
+}
+
+.perfil-titulo-secao {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+}
+
+/* ── Grade do criador ── */
+
+.perfil-grade {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.perfil-grade .card-aula {
+    flex: 0 0 280px;
+    max-width: 300px;
+}
+
+/* ── Cursos realizados ── */
+
+.lista-realizados {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.lista-realizados::-webkit-scrollbar {
+    height: 4px;
+}
+
+.lista-realizados::-webkit-scrollbar-track {
+    background: var(--azul-dois);
+    border-radius: 2px;
+}
+
+.lista-realizados::-webkit-scrollbar-thumb {
+    background: var(--azul-tres);
+    border-radius: 2px;
+}
+
+.card-realizado {
+    position: relative;
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card-realizado:hover {
+    transform: translateY(-3px);
+}
+
+.card-realizado-figura {
+    display: block;
+    height: 160px;
+}
+
+.card-realizado-figura img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Nome — bottom left */
+
+.card-realizado-nome {
+    position: absolute;
+    bottom: 3.2rem;
+    left: 0.9rem;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    z-index: 2;
+}
+
+/* Horas — top right overlay */
+
+.card-realizado-info {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 2;
+    background-color: var(--amarelo-um);
+    border-radius: 0.35rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.realizado-horas {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: var(--preto);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+/* Rodapé do card (barra + data) */
+
+.card-realizado-rodape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(8, 20, 38, 0.88);
+    padding: 0.4rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    z-index: 2;
+}
+
+.trofeu-barra {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.trofeu-label {
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--amarelo-um);
+}
+
+.barra-progresso {
+    height: 5px;
+    background-color: var(--azul-tres);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.barra-preenchida {
+    height: 100%;
+    background-color: var(--amarelo-um);
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+.realizado-data {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--amarelo-um);
+    align-self: flex-end;
+}
+
+/* ── Redes sociais ── */
+
+.lista-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.btn-rede {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--azul-dois);
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-rede:hover {
+    background-color: var(--azul-tres);
+    transform: scale(1.1);
+}
+
+.btn-rede svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--branco);
+}

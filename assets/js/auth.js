@@ -13,9 +13,17 @@ function isLoggedIn() {
     return !!(user && user.loggedIn === true);
 }
 
+function formatName(str) {
+    return str
+        .replace(/[._\-+]+/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase())
+        .trim();
+}
+
 function login(email, password) {
     if (!email.trim() || !password.trim()) return false;
-    const name = email.split('@')[0];
+    const raw = email.split('@')[0];
+    const name = formatName(raw);
     localStorage.setItem(AUTH_KEY, JSON.stringify({ email, name, loggedIn: true }));
     return true;
 }
@@ -38,7 +46,11 @@ function redirectIfLoggedIn() {
 }
 
 function getInitials(str) {
-    return str.replace(/[^a-zA-Z].*/, '').slice(0, 2).toUpperCase() || 'KT';
+    const words = str.trim().split(/\s+/);
+    if (words.length >= 2) {
+        return (words[0][0] + words[1][0]).toUpperCase();
+    }
+    return str.slice(0, 2).toUpperCase() || 'KT';
 }
 
 function setupNavbar() {
@@ -49,6 +61,9 @@ function setupNavbar() {
         const iniciais = getInitials(user.name || user.email);
         avatar.querySelector('.avatar-iniciais').textContent = iniciais;
         avatar.removeAttribute('hidden');
+        avatar.addEventListener('click', () => {
+            window.location.href = './perfil.html';
+        });
     }
 }
 
