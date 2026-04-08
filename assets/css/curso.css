@@ -7,7 +7,7 @@
     min-height: 88vh;
     display: flex;
     align-items: center;
-    background-image: url('/assets/img/prof economia.png');
+    background-image: url('../img/prof economia.png');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -112,7 +112,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: var(--azul-dois);
 }
 
 .curso-secao-titulo {
@@ -199,7 +198,6 @@
 
 .curso-pacotes {
     padding: 2.5rem 5vw 3.5rem;
-    background-color: var(--azul-dois);
 }
 
 .pacotes-container {
@@ -207,7 +205,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    background-color: #1c2e50;
     border-radius: 1.5rem;
     padding: 2.5rem 3rem;
     max-width: 900px;
