@@ -8,3 +8,10 @@ document.querySelectorAll('.seta-carrossel').forEach((btn) => {
         lista.scrollBy({ left: Number(btn.dataset.dir) * PASSO, behavior: 'smooth' });
     });
 });
+
+document.querySelectorAll('.card-aula, .card-curso').forEach((card) => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+        window.location.href = './curso.html';
+    });
+});

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowtor — Economia para o Ensino Médio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/curso.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="nav-logo">
+                <img src="./assets/img/know relogo .png" alt="Logo Knowtor" class="logoNav">
+                <span>Know<b>tor</b></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a class="aovivo" href="aovivo.html">Ao Vivo</a></li>
+            </ul>
+
+            <div class="nav-pesquisa">
+                <label for="busca-nav" class="sr-only">Pesquisar cursos</label>
+                <img src="./assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
+                <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
+            </div>
+
+            <button id="nav-avatar" class="nav-avatar" aria-label="Perfil do usuário" hidden>
+                <span class="avatar-iniciais" aria-hidden="true"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ── Hero ── -->
+        <section class="curso-hero" aria-label="Apresentação do curso">
+            <div class="curso-hero-conteudo">
+                <a href="./cursos.html" class="curso-voltar" aria-label="Voltar para os cursos">
+                    &lsaquo; VOLTAR PARA OS CURSOS
+                </a>
+
+                <h1 class="curso-titulo">ECONOMIA PARA O ENSINO MÉDIO</h1>
+                <p class="curso-subtitulo">Do 1º ao 3º ano: Teoria e Prática</p>
+
+                <div class="avaliacao curso-avaliacao" aria-label="Avaliação: 4.5 de 5 estrelas">
+                    <div class="estrelas-wrapper" aria-hidden="true">
+                        <span class="estrelas-fundo">★★★★★</span>
+                        <span class="estrelas-preenchidas" style="width:90%">★★★★★</span>
+                    </div>
+                    <span class="nota">4.5</span>
+                </div>
+
+                <p class="curso-descricao">
+                    Aprenda os pilares da economia de forma descomplicada,
+                    passando por micro e macroeconomia, educação financeira
+                    aplicada e preparação completa para o ENEM e vestibulares.
+                </p>
+
+                <a href="./aovivo.html" class="btn-marcar-tutoria">
+                    MARCAR<br>TUTORIA
+                </a>
+            </div>
+        </section>
+
+        <!-- ── Vídeo Apresentação ── -->
+        <section class="curso-video" aria-labelledby="titulo-video">
+            <h2 id="titulo-video" class="curso-secao-titulo">VÍDEO APRESENTAÇÃO</h2>
+
+            <figure class="video-placeholder" aria-label="Espaço para vídeo de apresentação do curso">
+                <div class="video-box" aria-hidden="true">
+                    <span class="video-play">&#9654;</span>
+                </div>
+                <figcaption class="sr-only">Vídeo de apresentação do curso de Economia</figcaption>
+            </figure>
+
+            <h2 class="curso-secao-titulo">SOBRE MIM</h2>
+        </section>
+
+        <!-- ── Sobre o Professor ── -->
+        <section class="curso-sobre" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre" class="sr-only">Sobre a professora</h2>
+
+            <div class="sobre-conteudo">
+                <figure class="sobre-foto">
+                    <img src="./assets/img/prof_eco.png" alt="Foto da professora Beatriz Cavalcante">
+                </figure>
+
+                <div class="sobre-bio">
+                    <h3 class="sobre-nome">BEATRIZ CAVALCANTE</h3>
+                    <p>
+                        Olá! Sou a Beatriz. Atualmente, curso Economia na USP e sou
+                        apaixonada pela forma como os números explicam o comportamento do
+                        mundo. Decidi entrar para a tutoria porque acredito que a economia
+                        não precisa ser um bicho de sete cabeças; quando conectamos a teoria
+                        com o que acontece no nosso cotidiano, tudo faz mais sentido.
+                    </p>
+                    <p>
+                        Minha abordagem é focada em ajudar estudantes que, assim como eu,
+                        buscam clareza em conceitos fundamentais. Como ainda estou no
+                        ambiente acadêmico, entendo perfeitamente as dificuldades das provas
+                        e a linguagem que os professores utilizam, o que facilita muito a
+                        nossa comunicação.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Pacotes ── -->
+        <section class="curso-pacotes" aria-labelledby="titulo-pacotes">
+            <div class="pacotes-container">
+                <figure class="pacotes-logo" aria-hidden="true">
+                    <img src="./assets/img/logo.png" alt="">
+                </figure>
+
+                <h2 id="titulo-pacotes" class="pacotes-titulo">PACOTES PARA O CURSO</h2>
+
+                <ul class="pacotes-lista" role="list">
+                    <li>
+                        <article class="pacote-card" aria-label="Pacote de 10 horas — R$99,99">
+                            <header class="pacote-badge pacote-badge-amarelo">
+                                PACOTE DE 10 HORAS
+                            </header>
+                            <p class="pacote-desc">
+                                Ideal para quem precisa de um fôlego extra antes daquela
+                                prova decisiva ou quer destravar um conteúdo específico.
+                                Conhecimento atualizado e prático.
+                            </p>
+                            <footer class="pacote-preco pacote-preco-amarelo">
+                                R$ 99,99
+                            </footer>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="pacote-card" aria-label="Pacote de 20 horas — R$149,99">
+                            <header class="pacote-badge pacote-badge-amarelo">
+                                PACOTE DE 20 HORAS
+                            </header>
+                            <p class="pacote-desc">
+                                Acompanhamento quinzenal para garantir que você não acumule
+                                dúvidas e mantenha a média lá no alto.
+                                O melhor equilíbrio entre tempo e investimento.
+                            </p>
+                            <footer class="pacote-preco pacote-preco-amarelo">
+                                R$ 149,99
+                            </footer>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="pacote-card" aria-label="Pacote de 30 horas — R$229,99">
+                            <header class="pacote-badge pacote-badge-vermelho">
+                                PACOTE DE 30 HORAS
+                            </header>
+                            <p class="pacote-desc">
+                                Preparação completa para quem mira o ENEM ou vestibulares
+                                concorridos. Suporte total com o menor custo por hora.
+                                Cuidado integral com sua evolução acadêmica.
+                            </p>
+                            <footer class="pacote-preco pacote-preco-vermelho">
+                                R$ 229,99
+                            </footer>
+                        </article>
+                    </li>
+                </ul>
+
+                <a href="./pacotes.html" class="btn-comprar" role="button">
+                    COMPRE AGORA
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <figure class="rodape-logo">
+                <img src="./assets/img/know relogo .png" alt="Logo Knowtor">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+            <p class="rodape-slogan">ILUMINANDO O SEU CAMINHO DE APRENDIZAGEM</p>
+            <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>requireAuth();</script>
+</body>
+</html>

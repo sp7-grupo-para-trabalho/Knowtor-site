@@ -10,3 +10,10 @@ botoesPaginacao.forEach((btn) => {
         btn.classList.add('pag-ativo');
     });
 });
+
+document.querySelectorAll('.card-aula, .card-pequeno').forEach((card) => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+        window.location.href = './curso.html';
+    });
+});
