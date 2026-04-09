@@ -26,6 +26,87 @@
     color: var(--branco);
 }
 
+input {
+        appearance: none;
+}
+
+.logo{
+    height: 200px;
+    width: 150px;
+}
+
+.pack{
+    display: grid;
+    justify-items: center;
+}
+
+.escolhas{
+    width: 50%;
+    height: 250px;
+    display: grid;
+    justify-content: center;
+    background-color: var(--pesquisa);
+    border: 20px solid var(--azul-quatro);
+    border-radius: 30px;
+    padding-bottom: 50px;
+}
+
+optgroup{
+    color: var(--amarelo-dois);
+}
+
+.basico, .intermediario, .avancado{
+    border-radius: 7px;
+    padding: 8px;
+    font-weight: 900;
+}
+
+.basico{
+    background-color: var(--amarelo-um);
+}
+
+.intermediario{ 
+    background-color: var(--amarelo-dois);
+}
+
+.avancado{
+    background-color: var(--vermelho);
+}
+
+.pix, .cartao{
+    border-radius: 15px;
+    padding: 8px;
+    font-weight: 900;
+    background-color: var(--backImg);
+}
+
+.confPag{
+    width: 15%;
+    padding: 0.85rem;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pagamento{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.backpacotes{
+    background-image: url(../img/estudo_homem.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;

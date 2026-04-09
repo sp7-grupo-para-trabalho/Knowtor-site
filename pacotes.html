@@ -1,59 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacotes</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Knowtor — Pacotes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/login.css">    
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="grupoImage">
+<body class="backpacotes">
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <div class="nav-logo">
                 <img src="./assets/img/know relogo .png" alt="Logo Knowtor" class="logoNav">
-                <span>
-                    Know<b>tor</b>
-                </span>
+                <span>Know<b>tor</b></span>
             </div>
-            <div class="navGrupo">
-                <a href="index.html">Inicio</a>
-                <a href="cursos.html">Cursos</a>
-                <a class="aovivo" href="aovivo.html">Ao Vivo</a>
-            </div>
-            <div class="grupoPesquisa">
-                <img src="./assets/img/lupa.png" alt="Lupa de pesquisa" class="lupa">
-                <input type="text" class="pesquisa">
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a class="aovivo" href="aovivo.html">Ao Vivo</a></li>
+            </ul>
+
+            <div class="nav-pesquisa">
+                <label for="busca-nav" class="sr-only">Pesquisar cursos</label>
+                <img src="./assets/img/lupa.png" alt="" aria-hidden="true" class="lupa">
+                <input type="search" id="busca-nav" class="pesquisa" placeholder="Pesquisar...">
             </div>
         </nav>
     </header>
+
     <main class="callBack">
-        <section>
-            <img class="logo" src="./assets/img/logo.png" alt="Logo Knowtor">
+        <section class="pack">
             <div>
-                <optgroup>Selecione um pacote</optgroup>
+            <img src="./assets/img/logo.png" alt="logo" class="logo">
+            </div>
+
+            <div class="escolhas">
+                <optgroup>SELECIONE UM PACOTE</optgroup>
                 <input type="radio" id="basico" name="plano" value="basico">
-                <label for="basico">PACOTE DE 10 HORAS - R$20,00</label><br>
+                <label for="basico" class="basico">PACOTE DE 10 HORAS - R$99,99</label><br>
                 <input type="radio" id="intermediario" name="plano" value="intermediario">
-                <label for="intermediario">PACOTE DE 20 HORAS - R$35,00</label><br>
-                <input type="radio" id="c=avancado" name="plano" value="avancado">
-                <label for="avancado">PACOTE DE 30 HORAS - R$50,00</label>
+                <label for="intermediario" class="intermediario">PACOTE DE 20 HORAS - R$149,99</label><br>
+                <input type="radio" id="avancado" name="plano" value="avancado">
+                <label for="avancado" class="avancado">PACOTE DE 30 HORAS - R$229,99</label>
             </div>
-            <div>
-                <optgroup>Selecione a forma de pagamento</optgroup>
+            <div class="pagamento">
+                <optgroup>SELECIONE O METODO DE PAGAMENTO</optgroup>
                 <input type="radio" id="pix" name="pagamento" value="pix">
-                <label for="pix">PIX</label><br>
+                <label for="pix" class="pix">PIX</label><br>
                 <input type="radio" id="cartao" name="pagamento" value="cartao">
-                <label for="cartao">CARTÃO</label><br>
+                <label for="cartao" class="cartao">CARTÃO</label><br>
             </div>
-            <button class="botaoFim" onclick="location.href= 'login.html'">
-                CONFIRMAR
-            </button>
+
+            <button type="submit" class="confPag" onclick="location.href= 'index.html'"">CONFIRMAR</button>
         </section>
     </main>
-    <footer>
-        <img src="./assets/img/logo.png" alt="Logo Knowtor" class="logo">
-        <h2> iluminamos o seu caminho de aprendizagem<br>AULAS TOTALMENTE <b class="aovivo">AO VIVO</b></h2>
-        <hr>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <figure class="rodape-logo">
+                <img src="./assets/img/know relogo .png" alt="Logo Knowtor">
+                <figcaption>Know<b>tor</b></figcaption>
+            </figure>
+            <p class="rodape-slogan">ILUMINANDO O SEU CAMINHO DE APRENDIZAGEM</p>
+            <p class="rodape-destaque">AULAS TOTALMENTE <span class="texto-aovivo">AO VIVO</span></p>
+        </div>
     </footer>
+
 </body>
 </html>
